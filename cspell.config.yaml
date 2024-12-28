@@ -3,6 +3,7 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - daisyui
   - importantimport
   - koimi
 ignoreWords: []

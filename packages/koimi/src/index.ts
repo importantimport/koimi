@@ -11,14 +11,17 @@ const koimi = (options: Partial<KoimiOptions>): AstroIntegration => ({
   hooks: {
     'astro:config:setup': async ({
       // config,
-      // injectRoute,
+      injectRoute,
       injectScript,
       updateConfig,
     }) => {
-      // injectRoute({
-      //   entrypoint: 'koimi/routes/index.astro',
-      //   pattern: '[...slug]',
-      // })
+      injectRoute({
+        entrypoint: 'koimi/routes/articles.astro',
+        pattern: 'articles/[...slug]',
+      })
+
+      // TODO: check KoimiOptions
+      injectScript('page-ssr', 'import \'koimi/styles/main.css\'')
 
       updateConfig({
         integrations: [
@@ -31,9 +34,6 @@ const koimi = (options: Partial<KoimiOptions>): AstroIntegration => ({
           ],
         },
       })
-
-      // TODO: check KoimiOptions
-      injectScript('page-ssr', 'import \'koimi/styles/main.css\'')
     },
   },
   name: 'koimi',

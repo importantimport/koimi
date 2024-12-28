@@ -1,0 +1,7 @@
+{
+  "name": "@koimi/example-basics",
+  "type": "module",
+  "dependencies": {
+    "astro": "catalog:"
+  }
+}

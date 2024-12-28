@@ -1,6 +1,12 @@
 {
   "name": "koimi",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./components": "./src/components/index.ts",
+    "./routes/*": "./src/routes/*",
+    "./styles/*": "./src/styles/*"
+  },
   "peerDependencies": {
     "astro": "catalog:"
   },

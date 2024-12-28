@@ -12,6 +12,7 @@ const koimi = (options: Partial<KoimiOptions>): AstroIntegration => ({
     'astro:config:setup': async ({
       // config,
       // injectRoute,
+      injectScript,
       updateConfig,
     }) => {
       // injectRoute({
@@ -30,6 +31,9 @@ const koimi = (options: Partial<KoimiOptions>): AstroIntegration => ({
           ],
         },
       })
+
+      // TODO: check KoimiOptions
+      injectScript('page-ssr', 'import \'koimi/styles/main.css\'')
     },
   },
   name: 'koimi',

@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "@importantimport/tsconfig/node.json"
+  ],
+  "compilerOptions": {
+    "strictNullChecks": true
+  },
+  "include": ["*.config.ts"]
+}

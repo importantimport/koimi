@@ -1,0 +1,10 @@
+{
+  "name": "koimi",
+  "type": "module",
+  "peerDependencies": {
+    "astro": "catalog:"
+  },
+  "devDependencies": {
+    "astro": "catalog:"
+  }
+}

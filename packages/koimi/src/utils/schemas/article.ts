@@ -11,5 +11,7 @@ export const articleSchema = () =>
         src: image(),
       }),
     ]).optional(),
+    published: z.date().optional(),
+    summary: z.string().optional(),
     title: z.string(),
   })

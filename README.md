@@ -8,7 +8,7 @@ Koimi is a continuation of [Urara](https://github.com/importantimport/urara), in
 
 ### Meta-framework
 
-Have you ever used [Starlight](https://starlight.astro.build)? Like it, Koimi is provided as [Astro Integration](https://docs.astro.build/en/guides/integrations-guide/).
+Have you ever used [Starlight](https://starlight.astro.build)? like it, Koimi is provided as [Astro Integration](https://docs.astro.build/en/guides/integrations-guide/).
 
 ```bash
 pnpm add koimi
@@ -27,6 +27,12 @@ export default defineConfig({
     }),
   ],
 })
+```
+
+Or you can create a new project from template (WIP):
+
+```bash
+pnpm create astro --template importantimport/koimi/examples/create
 ```
 
 ## License

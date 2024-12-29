@@ -6,7 +6,8 @@
     "astro": "astro",
     "build": "astro build",
     "dev": "astro dev",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "sync": "astro sync"
   },
   "dependencies": {
     "astro": "catalog:",

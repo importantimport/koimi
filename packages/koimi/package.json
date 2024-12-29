@@ -1,6 +1,10 @@
 {
   "name": "koimi",
   "type": "module",
+  "scripts": {
+    "astro": "astro",
+    "sync": "astro sync"
+  },
   "exports": {
     ".": "./src/index.ts",
     "./components": "./src/components/index.ts",

@@ -3,6 +3,7 @@ import { koimi } from 'koimi'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [koimi()],
-  site: 'https://example.com',
+  integrations: [koimi({
+    site: 'https://example.com',
+  })],
 })

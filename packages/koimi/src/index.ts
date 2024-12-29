@@ -1,13 +1,15 @@
-import type { AstroIntegration } from 'astro'
+import type { AstroIntegration, AstroUserConfig } from 'astro'
 
 import mdx from '@astrojs/mdx'
 import tailwindcss from '@tailwindcss/vite'
 
 export interface KoimiOptions {
   integrations?: AstroIntegration[]
+  // required by pages/feed.xml.ts
+  site: AstroUserConfig['site']
 }
 
-const koimi = (options: Partial<KoimiOptions> = {}): AstroIntegration => ({
+const koimi = (options: KoimiOptions): AstroIntegration => ({
   hooks: {
     'astro:config:setup': async ({
       // config,
@@ -33,6 +35,7 @@ const koimi = (options: Partial<KoimiOptions> = {}): AstroIntegration => ({
           mdx({ optimize: true }),
           ...(options.integrations ?? []),
         ],
+        site: options.site,
         vite: {
           plugins: [
             tailwindcss() as any,

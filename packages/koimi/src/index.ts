@@ -16,6 +16,11 @@ const koimi = (options: Partial<KoimiOptions> = {}): AstroIntegration => ({
       updateConfig,
     }) => {
       injectRoute({
+        entrypoint: 'koimi/pages/feed.xml.ts',
+        pattern: 'feed.xml',
+      })
+
+      injectRoute({
         entrypoint: 'koimi/pages/articles/[...slug].astro',
         pattern: 'articles/[...slug]',
       })

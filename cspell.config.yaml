@@ -3,9 +3,11 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - astrojs
   - daisyui
   - importantimport
   - koimi
+  - tsconfigs
   - urara
 ignoreWords: []
 import: []

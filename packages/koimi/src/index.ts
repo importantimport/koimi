@@ -3,6 +3,8 @@ import type { AstroIntegration, AstroUserConfig } from 'astro'
 import mdx from '@astrojs/mdx'
 import tailwindcss from '@tailwindcss/vite'
 
+export * from './utils'
+
 export interface KoimiOptions {
   integrations?: AstroIntegration[]
   // required by pages/feed.xml.ts
@@ -38,7 +40,7 @@ const koimi = (options: KoimiOptions): AstroIntegration => ({
         site: options.site,
         vite: {
           plugins: [
-            tailwindcss() as any,
+            tailwindcss(),
           ],
         },
       })

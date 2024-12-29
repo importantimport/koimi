@@ -3,5 +3,5 @@
     "@importantimport/tsconfig/app.json",
     "astro/tsconfigs/strict"
   ],
-  "include": ["src"]
+  "include": [".astro/types.d.ts", "src"]
 }

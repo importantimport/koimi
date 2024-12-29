@@ -15,6 +15,6 @@ export const GET: APIRoute = async context =>
         title: article.data.title,
         // TODO: https://docs.astro.build/en/recipes/rss/#including-full-post-content
       }) satisfies RSSFeedItem)),
-    site: context.site,
+    site: context.site!,
     title: 'Koimi',
   })

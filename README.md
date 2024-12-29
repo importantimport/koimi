@@ -35,6 +35,8 @@ Or you can create a new project from template (WIP):
 pnpm create astro --template importantimport/koimi/examples/create
 ```
 
+No more forks, Koimi is just a npm package.
+
 ## License
 
 [MIT](LICENSE.md)

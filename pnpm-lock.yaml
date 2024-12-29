@@ -47,6 +47,9 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 5.1.1(@types/node@22.10.2)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1)
+      koimi:
+        specifier: 'workspace:'
+        version: link:../../packages/koimi
 
   packages/create-koimi: {}
 

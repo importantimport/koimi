@@ -7,7 +7,7 @@ export interface KoimiOptions {
   integrations?: AstroIntegration[]
 }
 
-const koimi = (options: Partial<KoimiOptions>): AstroIntegration => ({
+const koimi = (options: Partial<KoimiOptions> = {}): AstroIntegration => ({
   hooks: {
     'astro:config:setup': async ({
       // config,
@@ -16,7 +16,7 @@ const koimi = (options: Partial<KoimiOptions>): AstroIntegration => ({
       updateConfig,
     }) => {
       injectRoute({
-        entrypoint: 'koimi/routes/articles.astro',
+        entrypoint: 'koimi/pages/articles/[...slug].astro',
         pattern: 'articles/[...slug]',
       })
 

@@ -51,8 +51,6 @@ importers:
         specifier: 'workspace:'
         version: link:../../packages/koimi
 
-  packages/create-koimi: {}
-
   packages/koimi:
     dependencies:
       '@astrojs/mdx':

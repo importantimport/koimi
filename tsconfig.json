@@ -1,7 +1,6 @@
 {
   "references": [
     { "path": "./examples/basics/tsconfig.json" },
-    { "path": "./packages/create-koimi/tsconfig.json" },
     { "path": "./packages/koimi/tsconfig.json" },
     { "path": "./tsconfig.node.json" }
   ],

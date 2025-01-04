@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<button class="btn btn-square btn-ghost" id="theme-change">
+  <label class="swap dark:swap-active">
+    <Icon class="swap-on size-6" name="heroicons:sun" />
+    <Icon class="swap-off size-6" name="heroicons:moon" />
+  </label>
+</button>
+
+<!-- https://docs.astro.build/en/tutorial/6-islands/2/#add-client-side-interactivity -->
+<script is:inline>
+const setTheme = (theme) => {
+  document.documentElement.setAttribute('data-theme', theme)
+  localStorage.setItem('theme', theme)
+}
+
+const theme = localStorage.getItem('theme')
+  ?? (window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light')
+
+setTheme(theme)
+
+document.getElementById('theme-change').addEventListener('click', () => {
+  const isDark
+    = document.documentElement.getAttribute('data-theme') === 'dark'
+
+  setTheme(isDark ? 'light' : 'dark')
+})
+</script>

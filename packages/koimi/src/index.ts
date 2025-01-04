@@ -2,6 +2,7 @@ import type { AstroIntegration, AstroUserConfig } from 'astro'
 
 import mdx from '@astrojs/mdx'
 import tailwindcss from '@tailwindcss/vite'
+import icon from 'astro-icon'
 
 export * from './utils'
 
@@ -40,6 +41,7 @@ const koimi = (options: KoimiOptions): AstroIntegration => ({
       updateConfig({
         integrations: [
           mdx({ optimize: true }),
+          icon(),
           ...(options.integrations ?? []),
         ],
         site: options.site,

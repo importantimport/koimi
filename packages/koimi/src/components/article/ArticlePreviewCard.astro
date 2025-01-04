@@ -8,7 +8,7 @@ const { summary, title } = Astro.props.data
 ---
 <article class="h-feed card bg-base-100 shadow">
   <div class="card-body">
-    <a href={`/articles/${id}`}><h2 class="card-title">{title}</h2></a>
+    <a href={`/articles/${id}`}><h2 class="card-title text-3xl">{title}</h2></a>
     {summary && <p>{summary}</p>}
     <!-- <div class="card-actions justify-end">
       <button class="btn btn-primary">Buy Now</button>

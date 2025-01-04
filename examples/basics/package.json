@@ -10,6 +10,7 @@
     "sync": "astro sync"
   },
   "dependencies": {
+    "@iconify-json/heroicons": "^1.2.2",
     "astro": "catalog:",
     "koimi": "workspace:"
   }

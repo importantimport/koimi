@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content'
+
+const articles = await getCollection('articles')
+---
+
+<ul>
+    {
+      articles.map(article => (
+        <li><a href={`/articles/${article.id}`}>{article.data.title}</a></li>
+      ))
+    }
+</ul>

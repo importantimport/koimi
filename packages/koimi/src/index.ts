@@ -25,6 +25,11 @@ const koimi = (options: KoimiOptions): AstroIntegration => ({
       })
 
       injectRoute({
+        entrypoint: 'koimi/pages/articles/index.astro',
+        pattern: 'articles',
+      })
+
+      injectRoute({
         entrypoint: 'koimi/pages/articles/[...slug].astro',
         pattern: 'articles/[...slug]',
       })

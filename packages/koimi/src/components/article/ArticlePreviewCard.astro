@@ -1,0 +1,17 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+type Props = CollectionEntry<'articles'>
+
+const { id } = Astro.props
+const { summary, title } = Astro.props.data
+---
+<article class="h-feed card bg-base-100 shadow">
+  <div class="card-body">
+    <a href={`/articles/${id}`}><h2 class="card-title">{title}</h2></a>
+    {summary && <p>{summary}</p>}
+    <!-- <div class="card-actions justify-end">
+      <button class="btn btn-primary">Buy Now</button>
+    </div> -->
+  </div>
+</article>

@@ -1,1 +1,1 @@
-export { articleSchema } from './article'
+export * from './posts'

@@ -1,0 +1,1 @@
+export { articleSchema } from './article'

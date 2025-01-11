@@ -10,8 +10,5 @@ const { summary, title } = Astro.props.data
   <div class="card-body">
     <a href={`/articles/${id}`}><h2 class="card-title text-3xl">{title}</h2></a>
     {summary && <p>{summary}</p>}
-    <!-- <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
-    </div> -->
   </div>
 </article>

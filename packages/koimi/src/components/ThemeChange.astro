@@ -30,9 +30,16 @@ document
     const isDark
       = document.documentElement.getAttribute('data-theme') === 'dark'
 
+    const enableTransitions = () =>
+      'startViewTransition' in document
+      && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+
+    if (!enableTransitions) {
+      setTheme(isDark ? 'light' : 'dark')
+      return
+    }
+
     // https://vitepress.dev/guide/extending-default-theme#on-appearance-toggle
-    // TODO: check reduce motion
-    // setTheme(isDark ? 'light' : 'dark')
     const clipPath = [
       `circle(0px at ${x}px ${y}px)`,
       `circle(${Math.hypot(
@@ -41,16 +48,19 @@ document
       )}px at ${x}px ${y}px)`,
     ]
 
-    await document.startViewTransition(() => setTheme(isDark ? 'light' : 'dark')).ready
-
-    document.documentElement.animate(
-      { clipPath: isDark ? clipPath.reverse() : clipPath },
-      {
-        duration: 400,
-        easing: 'ease-out',
-        pseudoElement: `::view-transition-${isDark ? 'old' : 'new'}(root)`,
-      },
-    )
+    await document
+      .startViewTransition(() => setTheme(isDark ? 'light' : 'dark'))
+      .ready
+      .then(() =>
+        document.documentElement.animate(
+          { clipPath },
+          {
+            duration: 400,
+            easing: 'ease-out',
+            pseudoElement: `::view-transition-new(root)`,
+          },
+        ),
+      )
   })
 </script>
 
@@ -60,14 +70,4 @@ document
     animation: none;
     mix-blend-mode: normal;
   }
-
-  /* html[data-theme="light"]::view-transition-old(root),
-  html[data-theme="dark"]::view-transition-new(root) {
-    z-index: 1;
-  }
-
-  html[data-theme="light"]::view-transition-new(root),
-  html[data-theme="dark"]::view-transition-old(root) {
-    z-index: 9999;
-  } */
 </style>

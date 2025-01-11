@@ -3,6 +3,10 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@9.15.1",
+  "scripts": {
+    "dev": "pnpm -rF @koimi/example-basics dev",
+    "lint": "eslint --flag unstable_ts_config ."
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.1",
     "@importantimport/eslint-config": "1.0.0-alpha.3",

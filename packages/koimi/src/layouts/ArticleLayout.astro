@@ -3,14 +3,16 @@ import type { CollectionEntry } from 'astro:content'
 
 import BaseLayout from './BaseLayout.astro'
 
-type Props = CollectionEntry<'articles'>
+interface Props {
+  article: CollectionEntry<'articles'>
+}
 
-const { title } = Astro.props.data
+const { title } = Astro.props.article.data
 ---
 
 <BaseLayout>
   <article class="h-entry card shadow prose max-w-none">
-    <div class="card-body">
+    <div class="card-body text-base">
       <h1 class="card-title text-3xl">{title}</h1>
       <slot />
     </div>

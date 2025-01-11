@@ -1,10 +1,11 @@
 version: '0.2'
-ignorePaths: []
+ignorePaths: [pnpm-lock.yaml]
 dictionaryDefinitions: []
 dictionaries: []
 words:
   - astrojs
   - daisyui
+  - iconify
   - importantimport
   - koimi
   - tsconfigs

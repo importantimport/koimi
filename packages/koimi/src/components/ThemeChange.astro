@@ -25,6 +25,9 @@ const theme
 setTheme(theme)
 
 document
+  .addEventListener('astro:after-swap', () => setTheme(theme))
+
+document
   .getElementById('theme-change')
   .addEventListener('click', async ({ clientX: x, clientY: y }) => {
     const isDark

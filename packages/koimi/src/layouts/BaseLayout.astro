@@ -4,14 +4,14 @@ import { ClientRouter } from 'astro:transitions'
 import Navbar from '../components/Navbar.astro'
 ---
 
-<html lang="en">
+<html class="bg-base-200" lang="en">
   <head>
     <ClientRouter />
   </head>
 
-  <body class="bg-base-200 min-h-screen">
+  <body class="min-h-screen overflow-x-hidden">
     <Navbar />
-    <main class="max-w-screen-md mx-auto">
+    <main class="max-w-screen-md mx-auto p-4 md:p-8">
       <slot />
     </main>
   </body>

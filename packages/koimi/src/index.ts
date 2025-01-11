@@ -59,6 +59,7 @@ const koimi = (userOptions: KoimiOptions): AstroIntegration => {
 
         // TODO: disable via KoimiOptions
         injectScript('page-ssr', 'import \'koimi/styles/main.css\'')
+        injectScript('page-ssr', 'import \'koimi/styles/tailwind.css\'')
 
         updateConfig({
           integrations: [

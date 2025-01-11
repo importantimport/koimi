@@ -5,6 +5,7 @@
     "astro": "astro",
     "sync": "astro sync"
   },
+  "files": ["src"],
   "exports": {
     ".": "./src/index.ts",
     "./components": "./src/components/index.ts",

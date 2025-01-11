@@ -7,11 +7,16 @@ interface Props {
   article: CollectionEntry<'articles'>
 }
 
+const { id } = Astro.props.article
 const { title } = Astro.props.article.data
 ---
 
 <BaseLayout>
-  <article class="h-entry card shadow prose max-w-none">
+  <article
+    class="h-entry card bg-base-100 shadow-lg prose max-w-none"
+    transition:animate="initial"
+    transition:name={id}
+  >
     <div class="card-body text-base">
       <h1 class="card-title text-3xl">{title}</h1>
       <slot />

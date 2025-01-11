@@ -6,7 +6,11 @@ type Props = CollectionEntry<'articles'>
 const { id } = Astro.props
 const { summary, title } = Astro.props.data
 ---
-<article class="h-feed card bg-base-100 shadow">
+<article
+  class="h-feed card bg-base-100 shadow-lg hover:shadow-xl transition md:hover:-translate-y-0.5"
+  transition:animate="initial"
+  transition:name={id}
+>
   <div class="card-body">
     <a href={`/articles/${id}`}><h2 class="card-title text-3xl">{title}</h2></a>
     {summary && <p>{summary}</p>}

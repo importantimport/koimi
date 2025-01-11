@@ -1,7 +1,7 @@
 ---
 title: 'First post'
 summary: 'Lorem ipsum dolor sit amet'
-published: 'Jul 08 2022'
+published: 2025-01-11
 # image: '/blog-placeholder-3.jpg'
 ---
 

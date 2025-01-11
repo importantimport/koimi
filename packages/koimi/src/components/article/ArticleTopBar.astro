@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  published: CollectionEntry<'articles'>['data']['published']
+}
+
+const { published } = Astro.props
+---
+
+<div class="flex gap-2">
+  <!-- TODO: update author name -->
+  <a
+    class="opacity-75 no-underline transition hover:text-primary hover:opacity-100"
+    href="#"
+    rel="author"
+  >
+    [REDACTED]
+  </a>
+  {
+    published instanceof Date && (
+      <span>/</span>
+      <time class="font-medium" datetime={published.toJSON()}>
+        {published.toLocaleString()}
+      </time>
+    )
+  }
+</div>

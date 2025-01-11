@@ -10,7 +10,7 @@ const articles = await getCollection('articles')
 <BaseLayout>
   <ul>{
     articles.map(article => (
-      <ArticlePreviewCard {...article} />
+      <ArticlePreviewCard {article} />
     ))
   }</ul>
 </BaseLayout>

@@ -1,14 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
+import ArticleTopBar from '../components/article/ArticleTopBar.astro'
 import BaseLayout from './BaseLayout.astro'
 
 interface Props {
   article: CollectionEntry<'articles'>
 }
 
-const { id } = Astro.props.article
-const { title } = Astro.props.article.data
+const { data: { published, title }, id } = Astro.props.article
 ---
 
 <BaseLayout>
@@ -18,6 +18,7 @@ const { title } = Astro.props.article.data
     transition:name={id}
   >
     <div class="card-body text-base">
+      <ArticleTopBar {published} />
       <h1 class="card-title text-3xl">{title}</h1>
       <slot />
     </div>

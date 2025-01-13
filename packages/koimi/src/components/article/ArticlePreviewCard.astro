@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
+import options from 'virtual:koimi/options'
+
 import ArticleTopBar from './ArticleTopBar.astro'
 
 interface Props {
@@ -16,7 +18,7 @@ const { data: { published, summary, title }, id } = Astro.props.article
 >
   <div class="card-body">
     <ArticleTopBar {published} />
-    <a href={`/articles/${id}`}><h2 class="card-title text-3xl">{title}</h2></a>
+    <a href={`/${options.routes.articles.replace('[...slug]', id)}`}><h2 class="card-title text-3xl">{title}</h2></a>
     {summary && <p>{summary}</p>}
   </div>
 </article>

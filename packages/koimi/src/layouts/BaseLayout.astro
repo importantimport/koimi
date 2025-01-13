@@ -16,7 +16,7 @@ import Navbar from '../components/Navbar.astro'
     <ClientRouter />
   </head>
 
-  <body class="min-h-screen overflow-x-hidden">
+  <body class="min-h-screen overflow-x-hidden motion-safe:scroll-smooth">
     <Navbar />
     <main class="max-w-screen-md mx-auto p-4 md:p-8">
       <slot />

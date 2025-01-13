@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
+import ArticleTags from '../components/article/ArticleTags.astro'
 import ArticleTopBar from '../components/article/ArticleTopBar.astro'
 import BaseLayout from './BaseLayout.astro'
 
@@ -8,7 +9,7 @@ interface Props {
   article: CollectionEntry<'articles'>
 }
 
-const { data: { published, title }, id } = Astro.props.article
+const { data: { published, tags, title }, id } = Astro.props.article
 ---
 
 <BaseLayout>
@@ -21,6 +22,7 @@ const { data: { published, title }, id } = Astro.props.article
       <ArticleTopBar {published} />
       <h1 class="card-title text-3xl">{title}</h1>
       <slot />
+      {tags && <ArticleTags {tags} />}
     </div>
   </article>
 </BaseLayout>

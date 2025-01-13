@@ -14,6 +14,7 @@ const ArticleSchema = ({ image }: SchemaContext) => z.object({
   ]).optional(),
   published: z.coerce.date().optional(),
   summary: z.string().optional(),
+  tags: z.array(z.string()).optional(),
   title: z.string(),
 })
 

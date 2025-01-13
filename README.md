@@ -37,6 +37,10 @@ pnpm create astro --template importantimport/koimi/examples/create
 
 No more forks, Koimi is just a npm package.
 
+### Modern Stack
+
+Astro v5, Tailwind v4, daisyUI v5... just keep it up to date.
+
 ## License
 
 [MIT](LICENSE.md)

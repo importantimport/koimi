@@ -23,9 +23,26 @@ const {
   <div class="card-body">
     <ArticleTopBar {published} />
     <h2 class="card-title text-3xl">
-      <!-- TODO: sort class -->
       <a
-        class="bg-[length:100%_0%] bg-[position:0_88%] underline decoration-4 decoration-transparent group-hover:decoration-primary hover:bg-[length:100%_100%] hover:text-primary-content bg-gradient-to-t from-primary to-primary bg-no-repeat transition-all"
+        class:list={[
+          // background
+          'bg-[length:100%_0%]',
+          'bg-[position:0_88%]',
+          'bg-no-repeat',
+          'bg-gradient-to-t',
+          'from-primary',
+          'to-primary',
+          // underline
+          'underline',
+          'decoration-4',
+          'decoration-transparent',
+          // hover
+          'group-hover:decoration-primary',
+          'hover:bg-[length:100%_100%]',
+          'hover:text-primary-content',
+          // transition
+          'transition-all',
+        ]}
         href={`/${options.routes.articles.replace('[...slug]', id)}`}
       >
         {title}

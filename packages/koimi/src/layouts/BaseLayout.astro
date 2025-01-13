@@ -1,11 +1,13 @@
 ---
 import { ClientRouter } from 'astro:transitions'
+import options from 'virtual:koimi/options'
 
 import Navbar from '../components/Navbar.astro'
 ---
 
 <html class="bg-base-200" lang="en">
   <head>
+    <title>{options.title}</title>
     <ClientRouter />
   </head>
 

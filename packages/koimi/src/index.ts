@@ -1,3 +1,5 @@
+/// <reference path="./virtual.d.ts" />
+
 import type { AstroIntegration, AstroUserConfig } from 'astro'
 import type { RequiredDeep } from 'type-fest'
 
@@ -5,6 +7,8 @@ import mdx from '@astrojs/mdx'
 import tailwindcss from '@tailwindcss/vite'
 import icon from 'astro-icon'
 import { defu } from 'defu'
+
+import { koimiViteVirtual } from './integrations/vite/virtual'
 
 export * from './utils'
 
@@ -20,6 +24,8 @@ export interface KoimiOptions {
   }
   // required by pages/feed.xml.ts
   site: AstroUserConfig['site']
+  /** @default `Koimi` */
+  title?: string
 }
 
 const defaultOptions: KoimiOptions = {
@@ -30,6 +36,7 @@ const defaultOptions: KoimiOptions = {
     feedXML: 'feed.xml',
   },
   site: 'http://localhost:4321',
+  title: 'Koimi',
 } satisfies RequiredDeep<KoimiOptions>
 
 const koimi = (userOptions: KoimiOptions): AstroIntegration => {
@@ -71,6 +78,7 @@ const koimi = (userOptions: KoimiOptions): AstroIntegration => {
           vite: {
             plugins: [
               tailwindcss(),
+              koimiViteVirtual(options),
             ],
           },
         })

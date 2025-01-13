@@ -1,10 +1,12 @@
 ---
+import options from 'virtual:koimi/options'
+
 import ThemeChange from './ThemeChange.astro'
 ---
 
 <header class="navbar min-h-10">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl" href="/">Koimi</a>
+    <a class="btn btn-ghost text-xl" href="/">{options.title}</a>
   </div>
   <div class="flex-none">
     <ThemeChange />

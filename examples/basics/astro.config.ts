@@ -9,5 +9,6 @@ export default defineConfig({
       articlesIndex: '/',
     },
     site: 'https://example.com',
+    title: 'Koimi Example',
   })],
 })

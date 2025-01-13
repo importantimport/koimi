@@ -8,7 +8,7 @@ interface Props {
 const { published } = Astro.props
 ---
 
-<div class="text-base flex gap-2">
+<div class="text-base font-medium flex gap-2">
   <!-- TODO: update author name -->
   <a
     class="opacity-75 no-underline transition hover:text-primary hover:opacity-100"
@@ -19,10 +19,13 @@ const { published } = Astro.props
   </a>
   {
     published instanceof Date && (
-      <span>/</span>
-      <time class="font-medium" datetime={published.toJSON()}>
-        {published.toLocaleString()}
-      </time>
+      <>
+        <span>/</span>
+        {/* TODO: fix color in ArticlePreviewCard */}
+        <time datetime={published.toJSON()}>
+          {published.toLocaleString()}
+        </time>
+      </>
     )
   }
 </div>

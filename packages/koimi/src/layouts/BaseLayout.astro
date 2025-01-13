@@ -2,6 +2,7 @@
 import { ClientRouter } from 'astro:transitions'
 import options from 'virtual:koimi/options'
 
+import iconUrl from '../assets/koimi.svg?url'
 import Navbar from '../components/Navbar.astro'
 ---
 
@@ -9,7 +10,8 @@ import Navbar from '../components/Navbar.astro'
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <!-- TODO: favicon -->
+    <!-- TODO: custom favicon -->
+    <link href={iconUrl} rel="icon" sizes="any" type="image/svg+xml" >
     <title>{options.title}</title>
     <ClientRouter />
   </head>

@@ -1,4 +1,4 @@
-# Koimi
+# Koimi [alpha]
 
 > 💘 Sweet, Powerful, Blazing-fast Blog Meta-framework.
 

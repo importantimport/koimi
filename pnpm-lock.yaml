@@ -20,6 +20,9 @@ importers:
       '@importantimport/eslint-config':
         specifier: 1.0.0-alpha.3
         version: 1.0.0-alpha.3(@antfu/eslint-config@3.12.1(@typescript-eslint/utils@8.18.2(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(@vue/compiler-sfc@3.5.13)(astro-eslint-parser@1.1.0(typescript@5.7.2))(eslint-plugin-astro@1.3.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
+      '@importantimport/tsconfig':
+        specifier: ^0.1.1
+        version: 0.1.1
       '@types/eslint':
         specifier: ^9.6.1
         version: 9.6.1
@@ -685,6 +688,9 @@ packages:
     peerDependencies:
       '@antfu/eslint-config': ^3.12.0
       eslint: ^9.17.0
+
+  '@importantimport/tsconfig@0.1.1':
+    resolution: {integrity: sha512-KVx3oyvGhGC0JEQUiR+FzriMoOLJo0X6zvqJxLg2EDVt/CxcB114A32IIfuEUfDXqrxKlWqPsmczmm1Cj4ja8w==}
 
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
@@ -3777,6 +3783,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@importantimport/tsconfig@0.1.1': {}
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
 

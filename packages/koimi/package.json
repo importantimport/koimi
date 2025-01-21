@@ -1,6 +1,7 @@
 {
   "name": "koimi",
   "type": "module",
+  "version": "0.0.1",
   "license": "MIT",
   "homepage": "https://github.com/importantimport/koimi",
   "repository": {

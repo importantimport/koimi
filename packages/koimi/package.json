@@ -1,6 +1,14 @@
 {
   "name": "koimi",
   "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/importantimport/koimi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/importantimport/koimi.git",
+    "directory": "packages/koimi"
+  },
+  "bugs": "https://github.com/importantimport/koimi/issues",
   "scripts": {
     "astro": "astro",
     "sync": "astro sync"

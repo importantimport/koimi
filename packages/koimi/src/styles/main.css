@@ -1,3 +1,8 @@
 html {
-    scrollbar-gutter: stable;
+  scrollbar-gutter: stable both-edges;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API/Using#basic_mpa_view_transition */
+@view-transition {
+  navigation: auto;
 }

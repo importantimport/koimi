@@ -1,12 +1,5 @@
-import type { Linter } from 'eslint'
+import { defineConfig } from '@moeru/eslint-config'
 
-import antfu from '@antfu/eslint-config'
-import ii from '@importantimport/eslint-config'
-
-export default antfu({
-  astro: true,
-  typescript: {
-    tsconfigPath: './tsconfig.json',
-  },
+export default defineConfig({
+  astro: true
 })
-  .append(ii()) as Linter.Config

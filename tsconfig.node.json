@@ -1,4 +1,4 @@
 {
-  "extends": "@importantimport/tsconfig/node.json",
+  "extends": "@moeru/tsconfig/node.json",
   "include": ["*.config.ts"]
 }

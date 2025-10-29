@@ -30,15 +30,15 @@
     "astro": "catalog:"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.3",
-    "@astrojs/rss": "^4.0.10",
-    "@tailwindcss/typography": "^0.5.15",
+    "@astrojs/mdx": "^4.3.9",
+    "@astrojs/rss": "^4.0.13",
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "4.0.0-beta.8",
     "astro-icon": "^1.1.5",
     "daisyui": "5.0.0-alpha.58",
     "defu": "^6.1.4",
     "fff-flavored-frontmatter": "^1.2.1",
     "tailwindcss": "4.0.0-beta.8",
-    "type-fest": "^4.32.0"
+    "type-fest": "^5.1.0"
   }
 }

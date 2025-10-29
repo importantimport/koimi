@@ -25,14 +25,14 @@ const ArticleSchema = ({ image }: SchemaContext) => z.object({
   title: z.string(),
 })
 
-export const articleSchema = <T extends BaseSchema | never = never>({
+export const articleSchema = <T extends BaseSchema = never>({
   extend,
 }: PostSchemaOptions<T> = {}) =>
   (ctx: SchemaContext) => {
-    const userSchema = extend ? extend(ctx) : undefined
+    const userSchema = typeof extend === 'function' ? extend(ctx) : extend
     const articleSchema = ArticleSchema(ctx)
 
-    return userSchema === undefined
+    return userSchema == null
       ? articleSchema
       : articleSchema.and(userSchema)
   }

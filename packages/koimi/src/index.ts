@@ -1,6 +1,6 @@
 /// <reference path="./virtual.d.ts" />
 
-import type { AstroIntegration, AstroUserConfig } from 'astro'
+import type { AstroIntegration, AstroUserConfig, ViteUserConfig } from 'astro'
 import type { FFFAuthor } from 'fff-flavored-frontmatter'
 import type { RequiredDeep } from 'type-fest'
 
@@ -84,7 +84,7 @@ const koimi = (userOptions: KoimiOptions): AstroIntegration => {
           site: options.site,
           vite: {
             plugins: [
-              tailwindcss(),
+              tailwindcss() as unknown as NonNullable<ViteUserConfig['plugins']>[number],
               koimiViteVirtual(options),
             ],
           },

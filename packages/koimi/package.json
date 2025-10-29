@@ -30,12 +30,12 @@
     "@astrojs/mdx": "^4.3.9",
     "@astrojs/rss": "^4.0.13",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "4.0.0-beta.8",
+    "@tailwindcss/vite": "^4.1.16",
     "astro-icon": "^1.1.5",
-    "daisyui": "5.0.0-alpha.58",
+    "daisyui": "^5.3.10",
     "defu": "^6.1.4",
     "fff-flavored-frontmatter": "^1.2.1",
-    "tailwindcss": "4.0.0-beta.8",
+    "tailwindcss": "^4.1.16",
     "type-fest": "^5.1.0"
   },
   "devDependencies": {

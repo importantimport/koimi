@@ -5,6 +5,8 @@ dictionaryDefinitions: []
 dictionaries: []
 words:
   - astrojs
+  - bumpp
+  - changelogithub
   - daisyui
   - defu
   - heroicons
@@ -13,6 +15,7 @@ words:
   - koimi
   - moeru
   - mportant
+  - sonarjs
   - tsconfigs
   - urara
 ignoreWords: []

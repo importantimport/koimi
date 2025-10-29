@@ -2,6 +2,7 @@ import type { ViteUserConfig } from 'astro'
 
 import type { KoimiOptions } from '../..'
 
+// eslint-disable-next-line sonarjs/function-return-type
 export const koimiViteVirtual = (options: KoimiOptions): NonNullable<ViteUserConfig['plugins']>[number] => {
   const modules = {
     'virtual:koimi/options': `export default ${JSON.stringify(options)}`,

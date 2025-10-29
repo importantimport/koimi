@@ -1,6 +1,7 @@
+import type { RSSFeedItem } from '@astrojs/rss'
 import type { APIRoute } from 'astro'
 
-import rss, { type RSSFeedItem } from '@astrojs/rss'
+import rss from '@astrojs/rss'
 import { getCollection } from 'astro:content'
 import options from 'virtual:koimi/options'
 

@@ -10,9 +10,9 @@ interface Props {
 }
 
 const {
-  data: { published, summary, title },
+  data: { authors, published, summary, title },
   id,
-} = Astro.props.article;
+} = Astro.props.article
 ---
 
 <article
@@ -21,7 +21,7 @@ const {
   transition:name={id}
 >
   <div class="card-body">
-    <ArticleTopBar {published} />
+    <ArticleTopBar {authors} {published} />
     <h2 class="card-title text-3xl">
       <a
         class:list={[

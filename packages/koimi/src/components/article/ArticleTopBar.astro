@@ -1,21 +1,29 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import type { FFFAuthor } from 'fff-flavored-frontmatter'
+
+import options from 'virtual:koimi/options'
 
 interface Props {
+  authors: CollectionEntry<'articles'>['data']['authors']
   published: CollectionEntry<'articles'>['data']['published']
 }
 
-const { published } = Astro.props
+const { authors, published } = Astro.props
+
+// TODO: support multiple author
+const author = authors?.[0] ?? options.authors[0] as FFFAuthor
+
 ---
 
 <div class="text-base font-medium flex gap-2">
-  <!-- TODO: update author name -->
+  <!-- TODO: author avatar -->
   <a
     class="opacity-75 no-underline transition hover:text-primary hover:opacity-100"
-    href="#"
+    href={author.url ?? '#'}
     rel="author"
   >
-    [REDACTED]
+    {author.name}
   </a>
   {
     published instanceof Date && (

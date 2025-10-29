@@ -1,6 +1,7 @@
 /// <reference path="./virtual.d.ts" />
 
 import type { AstroIntegration, AstroUserConfig } from 'astro'
+import type { FFFAuthor } from 'fff-flavored-frontmatter'
 import type { RequiredDeep } from 'type-fest'
 
 import mdx from '@astrojs/mdx'
@@ -13,6 +14,7 @@ import { koimiViteVirtual } from './integrations/vite/virtual'
 export * from './utils'
 
 export interface KoimiOptions {
+  authors: FFFAuthor[]
   integrations?: AstroIntegration[]
   routes?: {
     /** @default `articles/[...slug]` */
@@ -29,6 +31,11 @@ export interface KoimiOptions {
 }
 
 const defaultOptions: KoimiOptions = {
+  authors: [{
+    avatar: 'https://github.com/importantimport.png',
+    name: '!mportantImport',
+    url: 'https://github.com/importantimport',
+  }],
   integrations: [],
   routes: {
     articles: 'articles/[...slug]',

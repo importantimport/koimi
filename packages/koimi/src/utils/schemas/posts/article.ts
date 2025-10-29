@@ -5,6 +5,13 @@ import { z } from 'astro/zod'
 import type { PostSchemaOptions } from './shared'
 
 const ArticleSchema = ({ image }: SchemaContext) => z.object({
+  authors: z.array(
+    z.object({
+      avatar: z.string().url().optional(),
+      name: z.string(),
+      url: z.string().url().optional(),
+    }),
+  ).optional(),
   image: z.union([
     image(),
     z.object({

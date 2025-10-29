@@ -1,4 +1,4 @@
-version: "0.2"
+version: '0.2'
 ignorePaths:
   - pnpm-lock.yaml
 dictionaryDefinitions: []
@@ -11,6 +11,7 @@ words:
   - iconify
   - importantimport
   - koimi
+  - mportant
   - tsconfigs
   - urara
 ignoreWords: []

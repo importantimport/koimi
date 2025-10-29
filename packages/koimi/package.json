@@ -37,6 +37,7 @@
     "astro-icon": "^1.1.5",
     "daisyui": "5.0.0-alpha.58",
     "defu": "^6.1.4",
+    "fff-flavored-frontmatter": "^1.2.1",
     "tailwindcss": "4.0.0-beta.8",
     "type-fest": "^4.32.0"
   }

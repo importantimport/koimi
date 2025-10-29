@@ -9,7 +9,7 @@ interface Props {
   article: CollectionEntry<'articles'>
 }
 
-const { data: { published, tags, title }, id } = Astro.props.article
+const { data: { authors, published, tags, title }, id } = Astro.props.article
 ---
 
 <BaseLayout>
@@ -19,7 +19,7 @@ const { data: { published, tags, title }, id } = Astro.props.article
     transition:name={id}
   >
     <div class="card-body text-base">
-      <ArticleTopBar {published} />
+      <ArticleTopBar {authors} {published} />
       <h1 class="card-title text-3xl">{title}</h1>
       <slot />
       {tags && <ArticleTags {tags} />}

@@ -6,7 +6,8 @@
   "scripts": {
     "bump": "bumpp",
     "dev": "pnpm -rF @koimi/example-basics dev",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "sync": "pnpm -rF koimi astro sync"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.1.0",

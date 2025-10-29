@@ -9,9 +9,8 @@ import { Icon } from 'astro-icon/components'
   </label>
 </button>
 
-<!-- https://docs.astro.build/en/tutorial/6-islands/2/#add-client-side-interactivity -->
-<script is:inline>
-const setTheme = (theme) => {
+<script>
+const setTheme = (theme: string) => {
   document.documentElement.setAttribute('data-theme', theme)
   localStorage.setItem('koimi-theme', theme)
 }
@@ -22,7 +21,7 @@ const getTheme = () => localStorage.getItem('koimi-theme')
     : 'light')
 
 const handleButton = () => {
-  const button = document.getElementById('theme-change')
+  const button = document.getElementById('theme-change')! as HTMLButtonElement
 
   button.addEventListener('click', async ({ clientX: x, clientY: y }) => {
     const isDark
